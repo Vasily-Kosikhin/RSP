@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="UTF-8">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Камень, ножницы, бумага</title>
+    <link rel="stylesheet" href="./css/authorization.css">    
+    <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">   
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font: italic bold 16px/2;
+        }
+
+        .app {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-color: rgb(63, 63, 63);
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+    </div>
+    <script>
+      window.application = {
+        blocks: {},
+        screens: {},
+        renderScreen: function(screenName) {
+            window.application.screens[`${screenName}`]();
+        },
+        renderBlock: function(blockName, container) {
+            window.application.blocks[`${blockName}`](container)
+        },
+        timers: []
+        }
+    </script>
+    <script src="./js/authorization.js"></script>
+  </body>
+  </html>
+
+
+          <!-- <div class="auBackGround">
+            <div class="auContainer">
+                <h1 class="auLoginHead">Enter in RSP</h1>
+                <from class="auLoginContainer">
+                        <input class="auLoginInput">
+                        <button class="auLoginButton">Continue</button>
+                </from>
+            </div>
+        </div>  -->
+
+
+</html>

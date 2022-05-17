@@ -1,0 +1,72 @@
+.auBackGround {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    
+    width: 1920px;
+    height: 1080px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(130, 161, 172);
+}
+
+
+.auContainer {
+    width: 600px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    background-color: rgb(141, 187, 202);
+}
+
+.auLoginHead {
+    width: 600px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    background-color: rgb(238, 133, 215);
+}
+
+.auLoginContainer {
+    width: 600px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(135, 103, 194);
+}
+
+.auLoginInput {
+    width: 250px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+.auLoginButton {
+    width: 100px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
