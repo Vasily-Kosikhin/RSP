@@ -1,0 +1,13 @@
+.playerA {
+    width: 600px;
+    height: 600px;
+
+    background-color: azure;
+    display: flex;
+    flex-direction: column;
+}
+
+.playerA button {
+    width: 100px;
+    height: 100px;
+}

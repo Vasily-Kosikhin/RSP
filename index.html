@@ -6,15 +6,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Камень, ножницы, бумага</title>
-    <link rel="stylesheet" href="./css/authorization.css">    
-    <link rel="stylesheet" href="./css/font-awesome-4.7.0/css/font-awesome.min.css">   
+    <title>Rock, Scissors, Paper</title>
+    <link rel="stylesheet" href="./css/test.css">
+    <link rel="stylesheet" href="./css/authorization.css">
+    <link rel="stylesheet" href="./css/lobby.css">   
+    <link rel="stylesheet" href="./css/gameSearch.css">   
+    <link rel="stylesheet" href="./css/choosingTrick.css">   
+    <link rel="stylesheet" href="./css/waitingOpponent.css">   
+    <link rel="stylesheet" href="./css/gameResult.css">          
     <style>
+        @font-face {
+            font-family: medivial; /* Гарнитура шрифта */
+            src: url(./fonts/Medieval/Medieval.ttf); /* Путь к файлу со шрифтом */
+        }
+        
         *{
             padding: 0;
             margin: 0;
             box-sizing: border-box;
             font: italic bold 16px/2;
+            font-family: medivial;
+            -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+            
         }
 
         .app {
@@ -24,43 +42,140 @@
             right: 0px;
             bottom: 0px;
             background-color: rgb(63, 63, 63);
+            z-index: 2000;
             
             display: flex;
             justify-content: center;
             align-items: center;
         }
+
     </style>
   </head>
   <body>
-    <div class="app">
+    <div class="app"> 
     </div>
     <script>
       window.application = {
         blocks: {},
+        currentPlayer: {},
+        currentEnemyPlayer: {},
+        onlinePlayers: [],
+        requests: {},
         screens: {},
+        music: {},
+        tips: [],
         renderScreen: function(screenName) {
             window.application.screens[`${screenName}`]();
         },
-        renderBlock: function(blockName, container) {
-            window.application.blocks[`${blockName}`](container)
+        renderBlock: function(methodName, targetSelector, ...args) {
+            window.application.blocks[`${methodName}`](targetSelector, ...args)
         },
-        timers: []
+        timers: {},
         }
+    
     </script>
+    
+    <script src="./js/main.js"></script>
+    <script src="./js/music.js"></script>
+    <script src="./js/screen.js"></script>
+    <script src="./js/lobby.js"></script>
+    <script src="./js/gameSearch.js"></script>
+    <script src="./js/choosingTrick.js"></script>
+    <script src="./js/waitingOpponent.js"></script>
+    <script src="./js/gameResult.js"></script>
     <script src="./js/authorization.js"></script>
+
+    <!-- Авторизация -->
+
+    <!-- <div class="auBackGround">
+            <div class="auContainer">
+                <h1 class="auLoginHead">Enter in RSP</h1>
+                <div class="auLoginContainer">
+                        <input class="auLoginInput">
+                        <button class="auLoginButton">Continue</button>
+                </div>
+            </div>
+        </div>  -->
+
+      <!-- Лобби -->   
+
+        <!-- <div class="lbContainer">
+            <div class="lbPlayerContainer">
+                <div class="lbPlayerAvatarContainer">
+                    <img class="lbAvatarImg">
+                </div>
+                <div class="lbPlayerNameContainer">
+                    <span class="lbPlayerName">supername1</span>
+                    <span class="lbPlayerTitle">supername2</span>
+                </div>
+                <div class="lbPlayerStat">
+                    <div class="lbPlayerWins">
+                        <span>Game wins : 0</span>
+                    </div>
+                    <div class="lbPlayerLosses">
+                        <span>Game loss : 777</span>
+                    </div>
+                    <div class="lbPlayerWinrate">
+                        <span>Winrate : 100%</span>
+                    </div>
+                    <div class="lbPlayerWeapon">
+                        <span>Favorite Weapon : Scissors</span>
+                    </div>
+                </div>
+            </div>
+            <div class="lbInterfaceContainer">
+                <div class="lbPlayerRaiting">1000</div>
+                <div class="lbFindingStatus">Finding Game...</div>
+                <button class="lbGameFindButton">Find Game</button>
+            </div>
+            <div class="lbOnlineContainer">
+                <div class="lbPlayersOnline">
+                    <span class="lbOnlineCount">Players online : 100</span>
+                    <div class="lbPlayersList"></div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Поиск -->   
+
+
+        <!-- Выбор хода -->   
+
+        <!-- <div class="ctContainer">
+            <div class="ctContainerHead">Выберите ход</div>
+            <div class="ctContainerBody">
+                <div class="ctRockContainer">
+                    <img src="" alt="" class="ctRock">
+                </div>
+                <div class="ctScissorsContainer">
+                    <img src="" alt="" class="ctScrissors">
+                </div>
+                <div class="ctPaperContainer">
+                    <img src="" alt="" class="ctPaper">
+                </div>
+            </div>
+            <div class="ctContainerBottom"></div>
+        </div> -->
+
+        <!-- Ожидание игрока -->   
+
+        <!-- <div class="woContainer">
+            <div class="woContainerHead">Ожидаем ход соперника</div>
+            <div class="woContainerBody">
+                <img src="" alt="" class="woImg">
+            </div>
+            <div class="woContainerBottom"></div>
+        </div> -->
+
+        <!-- Экран исхода -->   
+
+        <!-- <div class="grContainer">
+            <img src="" alt="" class="grImg">
+            <button class="grBackToLobby">Back to Lobby</button>
+        </div> -->
   </body>
   </html>
 
 
-          <!-- <div class="auBackGround">
-            <div class="auContainer">
-                <h1 class="auLoginHead">Enter in RSP</h1>
-                <from class="auLoginContainer">
-                        <input class="auLoginInput">
-                        <button class="auLoginButton">Continue</button>
-                </from>
-            </div>
-        </div>  -->
+          
 
-
-</html>

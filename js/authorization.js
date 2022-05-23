@@ -1,41 +1,42 @@
-function renderAuthorizationScreen() {
+function createAuthorizationBlock(targetSelector) {
 
-    const mainBlock = document.querySelector(`.app`);
-    for (let elem of mainBlock.querySelectorAll(`*`)) {
-        elem.remove();
+    createBlock(`${targetSelector}`, `div`, `auBackGround`, ``, ``)
+
+    createBlock(`.auBackGround`, `div`, `auContainer`, ``, ``)
+
+    createBlock(`.auContainer`, `h1`, `auLoginHead`, ``, `Ваше имя`)
+
+    createBlock(`.auContainer`, `div`, `auLoginContainer`, ``, ``)
+
+    createBlock(`.auLoginContainer`, `input`, `auLoginInput`, `auLoginInput`, ``)
+
+    let input = document.querySelector(`#auLoginInput`)
+    input.oninput = function() {
+        this.value = this.value.substr(0,10)
     }
-    
-    const auBackGround = document.createElement(`div`)
-    auBackGround.classList.add(`auBackGround`)
-
-    const auContainer = document.createElement(`div`)
-    auContainer.classList.add(`auContainer`)
-
-    const auLoginHead = document.createElement(`h1`)
-    auLoginHead.innerHTML = `Enter in RSP`
-    auLoginHead.classList.add(`auLoginHead`)
-
-    const auLoginContainer = document.createElement(`from`)
-    auLoginContainer.classList.add(`auLoginContainer`)
-
-    const auLoginInput = document.createElement(`input`)
-    auLoginInput.classList.add(`auLoginInput`)
-
-    const auLoginButton = document.createElement(`button`)
-    auLoginButton.innerHTML = `Continue`
-    auLoginButton.classList.add(`auLoginButton`)
-
-    document.querySelector(`.app`).append(auBackGround)
-
-    auBackGround.append(auContainer)
-
-    auContainer.append(auLoginHead)
-    auContainer.append(auLoginContainer)
-
-    auLoginContainer.append(auLoginInput)
-    auLoginContainer.append(auLoginButton)
+    createBlock(`.auLoginContainer`, `button`, `auLoginButton`, `auLoginButton`, `Войти`)
 
 }
+window.application.blocks[`createAuthorizationBlock`] = createAuthorizationBlock;
 
-window.application.screens[`authorization`] = renderAuthorizationScreen;
+renderAuthorizationScreen()
+// renderLobbyScreen()
+// createBlock(`.auBackGround`, `div`, `emptyLose`, ``, `Победа!`)
+// createBlock(`.empty`, `button`, `grBackToLobby`, ``, `Вернуться в лобби`)
+// createBlock(`.auBackGround`, `div`, `ctContainerBody`, `ctContainerBody`, ``)
+
+
+const auLoginInput = document.querySelector(`#auLoginInput`)
+const auLoginButton = document.querySelector(`#auLoginButton`)
+let inputValue;
+
+
+
+
+
+auLoginButton.addEventListener(`click`, () => (inputValue = auLoginInput.value))
+auLoginButton.addEventListener(`click`, () => (window.application.music[`main`].play()))
+auLoginButton.addEventListener(`click`, () => (loginRecquest(inputValue)))
+
+
 

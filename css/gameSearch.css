@@ -1,0 +1,80 @@
+
+.gsTipsContainer {
+    width: 200px;
+    height: 275px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+}
+
+.gsTipTextСontainer {
+    width: 200px;
+    height: 275px;
+    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    background-image: url(../imges/playersOnlineBack.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+    
+
+}
+.gsTipText {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    font-size: 1.1em;
+    text-shadow: 1px 1px 1px black;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.gsNextTip {
+    width: 200px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.486);
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;
+
+    position: absolute;
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+
+.gsNextTip:hover {
+    color: rgba(255, 255, 255, 0.486);
+    color: white;
+
+    
+}
+
+.lbFindingStatus {
+    position: fixed;
+    text-align: start;
+    
+}

@@ -1,0 +1,181 @@
+.ctContainer {
+    width: 600px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    background-image: url(../imges/gameBack.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.ctContainerHead,
+.ctContainerBottom {
+    width: 600px;
+    height: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+}
+
+.ctContainerBody {
+    width: 600px;
+    height: 140px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+}
+
+.ctContainerBody div{
+    width: 200px;
+    height: 140px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+
+.lbEnemyNameMini, .lbEnemyTitleMini {
+    color: rgb(233, 230, 214);
+    text-shadow: 3px 3px 2px black;
+    font-size: 1em;
+}
+
+/* .ctContainerBody img{
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    
+
+} */
+
+.ctRock, .ctScrissors, .ctPaper, .woQuestionContainer {
+    width: 120px;
+    height: 120px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.ctRock {
+    background-image: url(../imges/rock.png);
+}
+
+.ctRock:hover {
+    background-image: url(../imges/rockOn.png);
+}
+
+.ctScrissors {
+    background-image: url(../imges/scrissors.png);
+}
+.ctScrissors:hover {
+    background-image: url(../imges/scrissorsOn.png);
+}
+
+.ctPaper {
+    background-image: url(../imges/paper.png);
+}
+.ctPaper:hover {
+    background-image: url(../imges/paperOn.png);
+}
+
+.woQuestionContainer {
+    background-image: url(../imges/question.jpg);
+}
+
+.ctHealthBar{
+    width: 200px;
+    height: 20px;
+
+}
+
+.lbPlayerListPlayerMiniContainer{
+    width: 200px;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-top: 5px;
+}
+
+.grBackToLobby {
+    width: 120px;
+    height: 20px;
+
+    color: white;
+    text-shadow: 1px 1px 1px black;
+
+    background-image: url(../imges/backtolobby.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border: 0;
+    border-radius: 3px;
+}
+
+.grBackToLobby:hover {
+    color: red;
+    background-image: url(../imges/buttonDown.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.empty {
+    width: 200px;
+    height: 140px;
+    text-align: center;
+    color: rgb(204, 204, 204);
+    font-size: 3.5em;
+    text-shadow: 1px 1px 1px black, 0 0 1em rgb(255, 255, 255);
+}
+.emptyWin{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    width: 200px;
+    height: 120px;
+    color: rgb(255, 231, 96);
+    font-size: 4em;
+    text-shadow: 1px 1px 1px black, 0 0 1em rgb(255, 254, 193);
+}
+
+.emptyLose{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    width: 200px;
+    height: 120px;
+    color: rgba(255, 0, 0, 0.541);
+    font-size: 4em;
+    text-shadow: 1px 1px 1px black, 0 0 1em rgba(255, 0, 0, 0.733);
+}

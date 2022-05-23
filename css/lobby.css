@@ -1,0 +1,306 @@
+
+.lbContainer {
+    width: 600px;
+    height: 300px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    background-image: url(../imges/lobbyBack.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.lbPlayerContainer {
+    width: 200px;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+
+}
+
+.lbPlayerProfile {
+    width: 200px;
+    height: 100px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    background-image: url(../imges/avatarBack.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.lbPlayerAvatarContainer {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+
+.lbAvatarImg {
+    width: 100px;
+    height: 100px;
+
+}
+
+.lbPlayerNameContainer {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:space-between;
+    flex-wrap: wrap;
+
+}
+.lbPlayerName,
+.lbPlayerTitle {
+    line-height: 40px;
+    text-align: center;
+    color: gold;
+    text-shadow: 3px 3px 2px black;
+    font-size: 1em;
+
+}
+
+.lbPlayerTitle {
+    color: rgb(233, 230, 214);
+}
+
+
+.lbPlayerStat {
+    width: 200px;
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    flex-wrap: nowrap;
+
+    background-image: url(../imges/statBack.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 5px;
+}
+
+.lbPlayerStat > div {
+    width: 180px;
+    height: 30px;
+
+    text-align: start;
+    padding-left: 5px;
+}
+
+.lbPlayerStat span {
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    padding-left: 6px;
+}
+
+
+
+
+
+.lbInterfaceContainer {
+    width: 150px;
+    height: 300px;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    
+}
+
+.lbInterfaceContainer > * {
+    width: 150px;
+    height: 40px;
+    
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.lbOnlineContainer {
+    width: 200px;
+    height: 300px;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+
+
+
+.lbPlayersOnline {
+    
+    width: 200px;
+    height: 275px;
+    text-align: center;
+    background-color: rgb(3, 105, 46);
+
+    background-image: url(../imges/playersOnlineBack.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 5px;
+}
+
+
+
+.lbPlayersOnline span {
+    color: rgb(221, 217, 217);
+    text-shadow: 1px 1px 1px black;
+    line-height: 1.2em;
+}
+
+.lbOnlineCount {
+    width: 200px;
+    height: 30px;
+    
+}
+
+.lbPlayersList {
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 200px;
+    height: 258px;
+    
+}
+
+.lbPlayersList::-webkit-scrollbar {
+    width: 0px;
+  }
+
+.lbPlayersList::-webkit-scrollbar-track {
+    background: black;        /* цвет дорожки */
+  }
+
+.lbPlayersList::-webkit-scrollbar-thumb {
+    background-color: blue;    /* цвет плашки */
+    border-radius: 20px;       /* закругления плашки */
+    border: 1px solid rgb(74, 124, 61);  /* padding вокруг плашки */
+}
+
+.lbPlayersListPlayersOnline {
+    width: 200px;
+    height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+.lbPlayerListPlayerMiniContainer{
+    width: 200px;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    margin-top: 5px;
+
+
+    background-image: url(../imges/playerBackMini.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.lbPlayerAvatarContainerMini {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+
+}
+
+.lbAvatarImgMini {
+    width: 50px;
+    height: 50px;
+
+}
+
+.lbPlayerNameContainerMini {
+    width: 130px;
+    height: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    flex-wrap: wrap;
+
+
+}
+
+.lbPlayerNameMini,
+.lbPlayerTitleMini {
+    line-height: 20px;
+    text-align: center;
+
+    color: rgb(233, 230, 214);
+    text-shadow: 3px 3px 2px black;
+    font-size: 1em;
+}
+
+.lbPlayerNameMini {
+    color: gold;
+}
+.lbGameFindButton {
+    width: 150px;
+    height: 40px;
+    border: 0;
+    background-image: url(../imges/lobbyButtonOn.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+.lbGameFindButton:hover {
+    width: 150px;
+    height: 40px;
+    background-image: url(../imges/lobbyButtonOff.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(189, 14, 14);
+    text-shadow: 1px 1px 1px black;
+}
+

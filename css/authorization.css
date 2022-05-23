@@ -1,3 +1,4 @@
+
 .auBackGround {
     top: 0px;
     left: 0px;
@@ -10,8 +11,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: rgb(130, 161, 172);
 }
 
 
@@ -25,7 +24,11 @@
     align-items: center;
     flex-wrap: wrap;
     
-    background-color: rgb(141, 187, 202);
+    background-image: url(../imges/intro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
 }
 
 .auLoginHead {
@@ -36,8 +39,9 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
-    background-color: rgb(238, 133, 215);
+    color: white;
+    text-shadow: 3px 3px 2px black;
+
 }
 
 .auLoginContainer {
@@ -48,7 +52,6 @@
     justify-content: center;
     align-items: center;
 
-    background-color: rgb(135, 103, 194);
 }
 
 .auLoginInput {
@@ -60,6 +63,16 @@
     align-items: center;
 
     text-align: center;
+    font-size: 2.5em;
+
+    color: white;
+    text-shadow: 3px 3px 2px black;
+    background-color: rgb(53, 124, 146)
+}
+
+.auLoginInput :active, :hover, :focus {
+    outline: 3px;
+    outline-offset: 0;
 }
 
 .auLoginButton {
@@ -69,4 +82,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2em; 
+    color: white;
+    text-shadow: 3px 3px 2px black;
+    background-color: rgb(53, 124, 146)
 }
